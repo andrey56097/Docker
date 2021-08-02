@@ -34,3 +34,6 @@ sudo docker-compose up -d
 
 // moodle location 
 cd  /var/lib/docker/volumes/experior-moodle_moodledata_data/
+
+// remove all images by mask 
+docker rmi $(docker images 'mysql' -a -q)
