@@ -31,6 +31,7 @@ services:
     rabbitmq:
         image: rabbitmq:management-alpine
         restart: always
+        env_file: ./app/.env
         ports:
             - $RABBIT_LOCAL_PORT:$RABBIT_DOCKER_PORT
             - $RABBIT_LOCAL_MANAGEMENT_PORT:$RABBIT_DOCKER_MANAGEMENT_PORT
